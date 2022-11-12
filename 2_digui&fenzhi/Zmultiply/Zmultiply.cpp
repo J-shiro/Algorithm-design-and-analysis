@@ -10,6 +10,7 @@ using namespace std;
     XY=AC*2^n+(AD+BC)*2^(n/2)+BD--->W(n)=4W(n/2)+O(n)==>W(n)=O(n^2)--->未发生改变
 
     AD+BC=(A-B)(D-C)+AC+BD-->W(n)=3W(n/2)+cn,W(1)=1--->由主定理：W(n)=O(n^(log3))
+    AC已经算过，所以不重复算，3——>AC,BD,(A-B)(D-C)
 */
 int count=0;
 

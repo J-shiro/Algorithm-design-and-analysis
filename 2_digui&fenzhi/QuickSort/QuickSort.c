@@ -1,5 +1,5 @@
 #include<stdio.h>
-
+#include<stdbool.h>
 /*
     取一个值排在确定位置，左边为小于该值的数，右边为大于该值的数
     f(a,s,t) >不做任何事 当a[s..t]中长度<2时
@@ -18,9 +18,26 @@ int Partition(int a[],int s,int t){//划分算法
             i++;                    //a[i]后移到a[j]位置
         }
         a[j]=a[i];
-    }
+    }//跟书上的代码有所不同，此处tmp会交换，一直改变位置
     a[i]=tmp;
     return i;
+}
+
+int Partition2(int a[],int s,int t){//书中的方法
+    int i=s,j=t+1;
+    int x=a[s];
+    while(true){
+        while(a[++i]<x&&i<t);
+        while(a[--j]>x);
+        if(i>=j)
+            break;
+        int tmp=a[i];
+        a[i]=a[j];
+        a[j]=tmp;
+    }
+    a[s]=a[j];
+    a[j]=x;
+    return j;
 }
 
 void QuickSort(int a[],int s,int t){

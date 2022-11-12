@@ -29,3 +29,6 @@ int main(){
     cout<<"position: "<<BinarySearch(T,x,n)<<endl;
     return 0;
 }
+
+//T(n)=2T(n-1)+1
+// -->T(n)=logn, 复杂性：O(logn)

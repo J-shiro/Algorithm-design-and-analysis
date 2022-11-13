@@ -39,3 +39,5 @@ int main(){
     cout<<"the whole Loading weight:"<<maxw<<endl;
     return 0;
 }
+
+//算法复杂度分析:O(nlogn)

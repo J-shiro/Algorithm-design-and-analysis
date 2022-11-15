@@ -2,6 +2,10 @@
 #include<stdbool.h>
 #include<math.h>
 
+/*
+    按枚举法，有n!种情况
+*/
+
 int q[100] = {0};//q[i]表示第i个皇后的列号，第i个皇后位置为(i,q[i])
 
 bool placeOK(int n){//测试第i行的q[i]列上可否放皇后

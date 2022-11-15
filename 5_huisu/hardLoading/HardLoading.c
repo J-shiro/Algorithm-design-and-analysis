@@ -68,3 +68,5 @@ int main(){
     }
     return 0;
 }
+
+//O(2^n)

@@ -86,7 +86,8 @@ $$
 
 ## 快速排序
 
-最坏情况：T(n)=O(n<sup>2</sup>)
+最坏情况：T(n)=O(n<sup>2</sup>)  
+
 $$
 T(n)=
 \begin{cases} 
@@ -94,14 +95,17 @@ T(n-1)+O(n)\quad(n>1) \\
 O(1)\quad\quad\quad\quad\quad\quad\quad(n=1)
 \end{cases}
 $$
-最好情况：T(n)=O(nlogn)
+  
+最好情况：T(n)=O(nlogn)  
+
 $$
 T(n)=
 \begin{cases} 
 2T(n/2)+O(n)\quad(n>1) \\
 O(1)\quad\quad\quad\quad\quad\quad\quad(n=1)
 \end{cases}
-$$
+$$  
+
 平均情况：O(nlogn)
 
 ## 线性时间选择
@@ -113,23 +117,27 @@ $$
 ## 最接近点对
 
 一维：  
+
 $$
 T(n)=
 \begin{cases} 
 2T(n/2)+O(n)\quad(n>4) \\
 O(1)\quad\quad\quad\quad\quad\quad\quad(n=4)
 \end{cases}
-$$
+$$  
+
 ==时间复杂度：O(nlogn)==
 
 二维：  
+  
 $$
 T(n)=
 \begin{cases} 
 2T(n/2)+O(n)\quad(n>4) \\
 O(1)\quad\quad\quad\quad\quad\quad\quad(n≤4)
 \end{cases}
-$$
+$$  
+  
 ==时间复杂度：O(nlogn)==
 
 # 第三章
@@ -205,7 +213,7 @@ $$
 ## 0-1背包
 
 $$
-m(i,j)=
+m\left(i,j\right)=
 \begin{cases}
 max\{m(i+1,j),m(i+1,j-w_i)+v_i\} \quad\quad\quad j>=w_i\\
 m(i+1,j)\quad 0<=j<w_i

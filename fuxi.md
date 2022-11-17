@@ -149,13 +149,13 @@ $$
 ## 矩阵连乘
 
 
-$$
+$$  
 {m(i,j)}=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=j) \\
 \min\limits_{i<=k<j}\{m(i,k)+m(k+1,j)+p_{i-1}p_kp_j\}\quad\quad i≠j
 \end{cases}
-$$
+$$  
 
 **时间复杂度：O(n<sup>3</sup>)**
 
@@ -193,7 +193,7 @@ $$
 ## 流水作业调度
 
 $$
-T(S,t)=\min\limits_{1<=i<=n}\{a_i+T(S-\{i\},b_i+max\{t-a_i,0\}\}
+T(S,t)=\min\limits_{1<=i<=n}\{a_i+T(S-\{i\},b_i+max\{t-a_i,0\})\}
 $$
 
 **时间复杂度：O(2<sup>n</sup>)**

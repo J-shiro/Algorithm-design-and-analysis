@@ -153,7 +153,7 @@ $$
 m(i,j)=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=j) \\
-\min\limits_{i<=k<j}(m(i,k)+m(k+1,j)+p_{i-1}p_kp_j)\quad\quad i≠j
+\min(m(i,k)+m(k+1,j)+p_{i-1}p_kp_j)\quad\quad i≠j,i<=k<j
 \end{cases}
 $$  
 
@@ -184,7 +184,7 @@ $$
 t(i,j)=
 \begin{cases}
 0 \quad\quad\quad i=j\\
-\min\limits_{i<=k<j}(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i<j
+\min(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i<j,i<=k<j
 \end{cases}
 $$
 
@@ -213,9 +213,9 @@ $$
 ## 0-1背包
 
 $$
-m\left(i,j\right)=
+m(i,j)=
 \begin{cases}
-max(m(i+1,j),m(i+1,j-w_i)+v_i) \quad\quad\quad j>=w_i\\
+\max(m(i+1,j),m(i+1,j-w_i)+v_i) \quad\quad\quad j>=w_i\\
 m(i+1,j)\quad 0<=j<w_i
 \end{cases}
 $$

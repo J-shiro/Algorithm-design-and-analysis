@@ -153,7 +153,7 @@ $$
 {m(i,j)}=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=j) \\
-\min\limits_{i<=k<j}\{m(i,k)+m(k+1,j)+p_{i-1}p_kp_j\}\quad\quad i≠j
+\min\limits_{i<=k<j}(m(i,k)+m(k+1,j)+p_{i-1}p_kp_j)\quad\quad i≠j
 \end{cases}
 $$  
 
@@ -166,7 +166,7 @@ $$
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=0,j=0) \\
 c(i-1,j-1)+1\quad\quad\quad i,j>0;x_i=y_i \\
-\max\{c(i,j-1),c(i-1,j)\}\quad\quad i≠j
+\max(c(i,j-1),c(i-1,j))\quad\quad i≠j
 \end{cases}
 $$
 
@@ -184,7 +184,7 @@ $$
 {t(i,j)}=
 \begin{cases}
 0 \quad\quad\quad i=j\\
-\min\limits_{i<=k<j}\{t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j)\}\quad i<j
+\min\limits_{i<=k<j}(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i<j
 \end{cases}
 $$
 
@@ -193,7 +193,7 @@ $$
 ## 流水作业调度
 
 $$
-T(S,t)=\min\limits_{1<=i<=n}\{a_i+T(S-\{i\},b_i+max\{t-a_i,0\})\}
+T(S,t)=\min\limits_{1<=i<=n}(a_i+T(S-\{i\},b_i+max(t-a_i,0)))
 $$
 
 **时间复杂度：O(2<sup>n</sup>)**
@@ -215,7 +215,7 @@ $$
 $$
 m\left(i,j\right)=
 \begin{cases}
-max\{m(i+1,j),m(i+1,j-w_i)+v_i\} \quad\quad\quad j>=w_i\\
+max(m(i+1,j),m(i+1,j-w_i)+v_i) \quad\quad\quad j>=w_i\\
 m(i+1,j)\quad 0<=j<w_i
 \end{cases}
 $$

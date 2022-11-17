@@ -1,4 +1,4 @@
-s# 第一章
+# 第一章
 
 **程序设计=数据结构+算法**
 
@@ -30,7 +30,7 @@ NP问题：在多项式时间内验证
 
 递推公式：T(n)=T(n/2)+1
 
-==时间复杂度：O(logn)==
+**时间复杂度：O(logn)**
 
 ## 大整数乘法
 
@@ -42,7 +42,7 @@ c\quad\quad\quad\quad\quad\quad\quad(n=1)
 \end{cases}
 $$
 
-==时间复杂度O(n<sup>log3</sup>)==
+**时间复杂度O(n<sup>log3</sup>)**
 
 ## 矩阵乘法
 
@@ -54,7 +54,7 @@ b\quad\quad\quad\quad\quad\quad\quad(n≤2)
 \end{cases}
 $$
 
-==时间复杂度O(n<sup>log7</sup>)==
+**时间复杂度O(n<sup>log7</sup>)**
 
 ## 棋盘覆盖
 
@@ -66,7 +66,7 @@ O(1)\quad\quad\quad\quad\quad\quad\quad(n=1)
 \end{cases}
 $$
 
-==时间复杂度：O(n<sup>2</sup>)==
+**时间复杂度：O(n<sup>2</sup>)**
 
 ## 合并排序
 
@@ -78,11 +78,11 @@ O(1)\quad\quad\quad\quad\quad\quad\quad(n=1)
 \end{cases}
 $$
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
-==最好时间复杂度：O(nlogn)==
+**最好时间复杂度：O(nlogn)**
 
-==最坏时间复杂度：O(nlogn)==
+**最坏时间复杂度：O(nlogn)**
 
 ## 快速排序
 
@@ -112,7 +112,7 @@ $$
 
 **一般选择问题可在O(n)时间内得到解决**
 
-==时间复杂度：O(n)==
+**时间复杂度：O(n)**
 
 ## 最接近点对
 
@@ -126,7 +126,7 @@ O(1)\quad\quad\quad\quad\quad\quad\quad(n=4)
 \end{cases}
 $$  
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 二维：  
   
@@ -138,7 +138,7 @@ O(1)\quad\quad\quad\quad\quad\quad\quad(n≤4)
 \end{cases}
 $$  
   
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 # 第三章
 
@@ -150,45 +150,45 @@ $$
 
 
 $$
-{m[i][j]}=
+{m(i,j)}=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=j) \\
-\min\limits_{i<=k<j}\{m[i][k]+m[k+1][j]+p_{i-1}p_kp_j\}\quad\quad i≠j
+\min\limits_{i<=k<j}\{m(i,k)+m(k+1,j)+p_{i-1}p_kp_j\}\quad\quad i≠j
 \end{cases}
 $$
 
-==时间复杂度：O(n<sup>3</sup>)==
+**时间复杂度：O(n<sup>3</sup>)**
 
 ## 最长公共子序列
 
 $$
-{m[i][j]}=
+{m(i,j)}=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=0,j=0) \\
-c[i-1][j-1]+1\quad\quad\quad i,j>0;x_i=y_i \\
-\max\{c[i][j-1],c[i-1][j]\}\quad\quad i≠j
+c(i-1,j-1)+1\quad\quad\quad i,j>0;x_i=y_i \\
+\max\{c(i,j-1),c(i-1,j)\}\quad\quad i≠j
 \end{cases}
 $$
 
-==时间复杂度：O(m*n)==
+**时间复杂度：O(m*n)**
 
 ## 最大字段和
 
 b[j]=max{ b[j-1]+a[j] , a[j] }
 
-==时间复杂度：O(n)==
+**时间复杂度：O(n)**
 
 ## 凸多边形最优三角剖分
 
 $$
-{t[i][j]}=
+{t(i,j)}=
 \begin{cases}
 0 \quad\quad\quad i=j\\
-\min\limits_{i<=k<j}\{t[i][k]+t[k+1][j]+w(v_{i-1}v_kv_j)\}\quad i<j
+\min\limits_{i<=k<j}\{t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j)\}\quad i<j
 \end{cases}
 $$
 
-==时间复杂度O(n<sup>3</sup>)==
+**时间复杂度O(n<sup>3</sup>)**
 
 ## 流水作业调度
 
@@ -196,9 +196,9 @@ $$
 T(S,t)=\min\limits_{1<=i<=n}\{a_i+T(S-\{i\},b_i+max\{t-a_i,0\}\}
 $$
 
-==时间复杂度：O(2<sup>n</sup>)==
+**时间复杂度：O(2<sup>n</sup>)**
 
-**Johnson法则：min{b~i~ , a~j~} ≥ min{b~j~ , a~i~}**
+**Johnson法则：min{b<sub>i</sub> , a<sub>j</sub>} ≥ min{b<sub>j</sub> , a<sub>i</sub>}**
 
 **1.a<=b构成一个作业子集N1**
 
@@ -208,7 +208,7 @@ $$
 
 **4.先N1'，后N2'**
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 ## 0-1背包
 
@@ -220,7 +220,7 @@ m(i+1,j)\quad 0<=j<w_i
 \end{cases}
 $$
 
-==时间复杂度：O(nc)==
+**时间复杂度：O(nc)**
 
 ## TSP
 
@@ -228,7 +228,7 @@ $$
 T(v_i,V)=\min\limits_{v_j∈V}(d_{ij}+T(v_j,V-\{v_j\}))
 $$
 
-==时间复杂度：O(n2<sup>n</sup>)==
+**时间复杂度：O(n2<sup>n</sup>)**
 
 # 第四章
 
@@ -246,7 +246,7 @@ T和T’ 最优值递归关系：B(T)=B(T')+f(x)，通过反证法证出矛盾
 
 动完成时间
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 交换论证法，证明活动安排问题
 
@@ -266,21 +266,21 @@ T和T’ 最优值递归关系：B(T)=B(T')+f(x)，通过反证法证出矛盾
 
 ## 一般背包
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 ## 最优装载
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 ## 哈夫曼编码
 
-==时间复杂度：O(nlogn)==
+**时间复杂度：O(nlogn)**
 
 ## 多机调度
 
-n≤m==时间复杂度：O(1)==
+n≤m**时间复杂度：O(1)**
 
-n>m==时间复杂度：O(nlogn)==
+n>m**时间复杂度：O(nlogn)**
 
 # 第五章
 
@@ -341,13 +341,13 @@ ok: 进入左子树，i与j相连
 
 cn+n-i>bestn: 进入右子树
 
-==时间复杂度：O(n2<sup>n</sup>)==
+**时间复杂度：O(n2<sup>n</sup>)**
 
 ## m找色
 
 m叉树，子集树特殊情况
 
-==时间复杂度：O(nm<sup>n</sup>)==
+**时间复杂度：O(nm<sup>n</sup>)**
 
 ## TSP
 
@@ -361,7 +361,7 @@ m叉树，子集树特殊情况
 
 ​				   cw+r>bestw (右剪枝)
 
-==时间复杂度：O(2<sup>n</sup>)==
+**时间复杂度：O(2<sup>n</sup>)**
 
 ## 批处理作业调度
 
@@ -371,7 +371,7 @@ m叉树，子集树特殊情况
 
 `f2[i]=max(f2[i-1],f1)+m[x[j]][2]`
 
-==时间复杂度：O(n!)==
+**时间复杂度：O(n!)**
 
 # 第六章
 

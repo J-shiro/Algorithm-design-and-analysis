@@ -150,7 +150,7 @@ $$
 
 
 $$  
-{m(i,j)}=
+m(i,j)=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=j) \\
 \min\limits_{i<=k<j}(m(i,k)+m(k+1,j)+p_{i-1}p_kp_j)\quad\quad i≠j
@@ -162,7 +162,7 @@ $$
 ## 最长公共子序列
 
 $$
-{m(i,j)}=
+m(i,j)=
 \begin{cases} 
 0\quad\quad\quad\quad\quad\quad\quad\quad\quad\quad(i=0,j=0) \\
 c(i-1,j-1)+1\quad\quad\quad i,j>0;x_i=y_i \\
@@ -181,7 +181,7 @@ b[j]=max{ b[j-1]+a[j] , a[j] }
 ## 凸多边形最优三角剖分
 
 $$
-{t(i,j)}=
+t(i,j)=
 \begin{cases}
 0 \quad\quad\quad i=j\\
 \min\limits_{i<=k<j}(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i<j

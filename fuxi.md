@@ -184,7 +184,7 @@ $$
 t(i,j)=
 \begin{cases}
 0 \quad\quad\quad i=j\\
-\min\limits_{i\le k\lt j}(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i<j
+\min\limits_{i\le k\lt j}(t(i,k)+t(k+1,j)+w(v_{i-1}v_kv_j))\quad i\lt j
 \end{cases}
 $$
 
